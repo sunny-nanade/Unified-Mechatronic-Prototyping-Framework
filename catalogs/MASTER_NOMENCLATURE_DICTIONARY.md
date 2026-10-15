@@ -67,7 +67,7 @@ Where:
 
 ---
 
-### 5. STANDARDIZED VALIDATION & ERROR METRICS
+### 5. ERROR METRICS (definitions only; no experimental data are used in this study)
 
 - Root Mean Square Error (RMSE):
   RMSE = sqrt( (1/N) * sum_{k=1}^N (x_{sim}(t_k) - x_{exp}(t_k))^2 )
@@ -75,3 +75,4 @@ Where:
   NMAE = ( (1/N) * sum_{k=1}^N |x_{sim}(t_k) - x_{exp}(t_k)| ) / (x_max - x_min) * 100%
 - Coefficient of Determination (R^2 Score):
   R^2 = 1 - sum( (x_exp - x_sim)^2 ) / sum( (x_exp - mean(x_exp))^2 )
+
