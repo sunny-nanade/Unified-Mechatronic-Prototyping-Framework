@@ -20,8 +20,13 @@ Modern mechatronic development requires bridging the sim-to-real gap between ide
 
 2. **Four Deterministic Pre-Fabrication Verification Gates:**
    - **Gate 1 (Mechanical Energy & Power Consistency):** Normalized mechanical energy drift ($\varepsilon_E < 10^{-4}$) for conservative orbits; normalized power-balance dissipation residual ($\varepsilon_P < 2.0 \times 10^{-2}$) for forced, dissipative, and non-holonomic systems.
-   - **Gate 2 (Dynamic Actuator Torque Headroom):** Actuator dynamic headroom margin ($S_i \ge 20\%$) to safeguard against transient saturation, friction, and thermal derating.
-   - **Gate 3 (Kinematic Feasibility & Static Stability):** Kinematic singularity clearance ($\sigma_{\min}(\mathbf{J}_e) \ge 0.0105$), full controllability rank ($\text{rank}(\mathcal{C}) = n$), Zero-Moment Point (ZMP) margins ($d_{\text{ZMP}} \ge 32\text{ mm}$), Static Stability Margin ($\text{SSM} \ge 60\text{ mm}$), and metacentric righting stability ($\overline{BG}_z \ge +50\text{ mm}$).
+   - **Gate 2 (Dynamic Actuator Torque Headroom):** Actuator dynamic headroom margin ($S_i \ge 20$%) to safeguard against transient saturation, friction, and thermal derating.
+   - **Gate 3 (Kinematic Feasibility & Static Stability):** Multi-criteria physical and geometric constraints:
+     - Kinematic singularity clearance: $\sigma_{\min}(J) \ge 0.0105$
+     - Full controllability rank: $\text{rank}(C) = n$
+     - Zero-Moment Point (ZMP) margin: $d_{\text{ZMP}} \ge 32\text{ mm}$
+     - Static Stability Margin: $\text{SSM} \ge 60\text{ mm}$
+     - Metacentric righting stability: $BG_z \ge +50\text{ mm}$
    - **Gate 4 (Spectral Asymptotic Stability):** Hurwitz spectral stability of designated trim equilibria ($\max \text{Re}(\lambda_i) < 0$) and closed-loop Riccati (CARE) LQR pole placement.
 
 3. **Empirical Prototyping Demonstration:**
