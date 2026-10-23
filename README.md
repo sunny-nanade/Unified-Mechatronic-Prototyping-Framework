@@ -29,17 +29,17 @@ $$\mathbf{z}^T \left( \dot{\mathbf{M}}(\mathbf{q}) - 2\mathbf{C}(\mathbf{q}, \do
 ### 2. Four Deterministic Pre-Fabrication Verification Gates
 Prior to hardware fabrication, candidate models must deterministically pass four quantitative verification gates:
 * **Gate 1 (Mechanical Energy Drift & Power Balance):**
-  $$\varepsilon_E(t) = \left|\frac{E(t) - E(0)}{E(0)}\right| < 10^{-4} \quad \text{(conservative orbits)}, \qquad \varepsilon_P(t) = \frac{|\Delta E_{\text{mech}}(t) - W_{\text{ext}}(t) + E_{\text{diss}}(t)|}{\max(|W_{\text{ext}}(t)|, |E_{\text{diss}}(t)|, E_0)} < 2.0 \times 10^{-2}$$
+  $$\varepsilon_E(t) = \left|\frac{E(t) - E(0)}{E(0)}\right| < 10^{-4} \quad \text{(conservative orbits)}, \qquad \varepsilon_P(t) = \frac{|\Delta E_{\mathrm{mech}}(t) - W_{\mathrm{ext}}(t) + E_{\mathrm{diss}}(t)|}{\max(|W_{\mathrm{ext}}(t)|, |E_{\mathrm{diss}}(t)|, E_0)} < 2.0 \times 10^{-2}$$
 * **Gate 2 (Dynamic Actuator Torque Headroom):**
-  $$S_i = \min_{t \in [0, T]} \left( 1 - \frac{|\tau_i(t)|}{\tau_{i,\max}} \right) \times 100\% \ge 20\%$$
+  $$S_i = \min_{t \in [0, T]} \left( 1 - \frac{|\tau_i(t)|}{\tau_{i,\max}} \right) \ge 0.20 \quad (\ge 20\%)$$
 * **Gate 3 (Kinematic Clearance & Stability Boundaries):**
   - Manipulators: $\sigma_{\min}(\overline{\mathbf{J}}_e) \ge 0.187 > 0$, $w = |\det(\mathbf{J})| \ge 0.0105$
-  - Controllability Rank: $\operatorname{rank}(\mathcal{C}) = 2n$ for the $2n$-dimensional state-space
-  - Legged Locomotion: Dynamic ZMP margin $d(\mathbf{p}_{\text{ZMP}}, \partial\mathcal{S}_{\text{foot}}) \ge 32.0\text{ mm}$, Static Stability Margin $\text{SSM} \ge 60.0\text{ mm}$
+  - Controllability Rank: $\mathrm{rank}(\mathcal{C}) = 2n$ for the $2n$-dimensional state-space
+  - Legged Locomotion: Dynamic ZMP margin $d_{\mathrm{ZMP}} \ge 32.0\text{ mm}$, Static Stability Margin $\mathrm{SSM} \ge 60.0\text{ mm}$
   - Marine Hydrodynamics: Metacentric height $\overline{BG}_z \ge +50.0\text{ mm} > 0$
-  - Automotive Platforms: Static Stability Factor $\text{SSF} = 1.778 > \mu_{\text{peak}} = 0.78$
+  - Automotive Platforms: Static Stability Factor $\mathrm{SSF} = 1.778 > \mu_{\mathrm{peak}} = 0.78$
 * **Gate 4 (Spectral Asymptotic Stability):**
-  $$\max_i \operatorname{Re}(\lambda_i(\mathbf{A}_{\text{cl}})) < 0$$
+  $$\max_i \mathrm{Re}(\lambda_i(\mathbf{A}_{\mathrm{cl}})) < 0$$
 
 ---
 
@@ -93,9 +93,9 @@ The experimental and numerical validation follows a strict two-tier architecture
 
 ### Prototyping Economics Lifecycle Audit
 Empirical data collected across the prototyping lifecycle of System 04 compared to historical unguided baseline builds:
-* **Physical Rebuild Iterations:** Reduced from $4.20 \pm 0.45$ down to a single build ($N_f = 1.0$), achieving a **$76.19\%$ reduction in physical fabrication cycles**.
-* **Direct Prototyping Capital Cost:** Reduced from $\$3,850 \pm \$550$ down to $\$1,215$, achieving a **$68.44\%$ direct cost savings**.
-* **Bench Assembly & Debugging Labor:** Reduced from $92.4 \pm 12.8\text{ h}$ to $28.5\text{ h}$ ($69.16\%$ labor savings).
+* **Physical Rebuild Iterations:** Reduced from $4.20 \pm 0.45$ down to a single build ($N_f = 1.0$), achieving a **76.19% reduction in physical fabrication cycles**.
+* **Direct Prototyping Capital Cost:** Reduced from USD 3,850 ± 550 down to USD 1,215, achieving a **68.44% direct cost savings**.
+* **Bench Assembly & Debugging Labor:** Reduced from $92.4 \pm 12.8\text{ h}$ to $28.5\text{ h}$ (**69.16% labor savings**).
 
 ---
 
