@@ -92,10 +92,11 @@ The experimental and numerical validation follows a strict two-tier architecture
 ```
 
 ### Prototyping Economics Lifecycle Audit
-Empirical data collected across the prototyping lifecycle of System 04 compared to historical unguided baseline builds:
+Empirical data collected across the prototyping lifecycle of System 04 compared to historical unguided baseline builds ($N = 5$ projects, Bessel's correction $\text{ddof} = 1$):
 * **Physical Rebuild Iterations:** Reduced from $4.20 \pm 0.45$ down to a single build ($N_f = 1.0$), achieving a **76.19% reduction in physical fabrication cycles**.
-* **Direct Prototyping Capital Cost:** Reduced from USD 3,850 ± 550 down to USD 1,215, achieving a **68.44% direct cost savings**.
-* **Bench Assembly & Debugging Labor:** Reduced from $92.4 \pm 12.8\text{ h}$ to $28.5\text{ h}$ (**69.16% labor savings**).
+* **Direct Prototyping Capital Cost:** Reduced from USD $3,850 \pm 495$ down to USD $1,215$, achieving a **68.44% direct cost savings**.
+* **Total Project Engineering Labor:** Reduced from $109.4 \pm 15.7\text{ h}$ (virtual modeling + bench assembly/rework) down to $45.0\text{ h}$, achieving a **58.87% total project labor savings**.
+* **Bench Troubleshooting & Assembly Labor:** Reduced from $92.4 \pm 12.6\text{ h}$ down to $28.5\text{ h}$ (**69.16% bench labor savings**).
 
 ---
 
